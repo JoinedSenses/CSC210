@@ -10,6 +10,8 @@ _MYLIB_BEGIN
 template<class T>
 class LinkedList {
 	struct Node {
+		Node() : next(nullptr) {};
+
 		T data;
 		Node *next;
 	};
@@ -75,7 +77,6 @@ inline LinkedList<T>::LinkedList(LinkedList<T> const &other) {
 	while (current != nullptr) {
 		node = new Node();
 		node->data = current->data;
-		node->next = nullptr;
 
 		if (m_back == nullptr) {
 			m_front = node;
@@ -172,7 +173,6 @@ inline LinkedList<T> &LinkedList<T>::operator=(LinkedList<T> const &other) {
 	while (current != nullptr) {
 		node = new Node();
 		node->data = current->data;
-		node->next = nullptr;
 
 		if (m_back == nullptr) {
 			m_front = node;
@@ -197,7 +197,6 @@ inline void LinkedList<T>::push(T item) {
 
 	Node *node = new Node();
 	node->data = item;
-	node->next = nullptr;
 
 	if (m_front == nullptr) {
 		m_front = node;
@@ -217,7 +216,6 @@ inline void LinkedList<T>::insert(T item, size_t idx) {
 
 	Node *node = new Node();
 	node->data = item;
-	node->next = nullptr;
 
 	Node *current = m_front;
 	Node *previous = nullptr;
