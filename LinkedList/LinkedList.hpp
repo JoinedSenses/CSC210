@@ -18,8 +18,8 @@ class LinkedList {
 	Node *m_back;
 	size_t m_count;
 public:
-	/* Constructors */
-		// Default
+/* Constructors */
+	// Default
 	LinkedList() : m_front(nullptr), m_back(nullptr), m_count(0) {};
 	// Copy
 	LinkedList(LinkedList<T> const &other);
@@ -28,20 +28,20 @@ public:
 	// Init List
 	LinkedList(std::initializer_list<T> const &list);
 
-	/* Destructor*/
+/* Destructor*/
 	~LinkedList();
 
-	/* Operators*/
-		// Access item at specified index.
-		// Assumes index is valid.
+/* Operators*/
+	// Access item at specified index.
+	// Assumes index is valid.
 	T &operator[](size_t idx);
 	T &operator[](size_t idx) const;
 
 	// Sets one list equal to another.
 	LinkedList<T> &operator=(LinkedList<T> const &other);
 
-	/* Functions */
-		// Pushes item to end of list.
+/* Functions */
+	// Pushes item to end of list.
 	void push(T item);
 
 	// Inserts item before specified index.
