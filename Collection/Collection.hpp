@@ -8,8 +8,7 @@
 #include <assert.h> /* assert() */
 #include <utility> /* std::move */
 #include <initializer_list> /* std::initializer_list */
-
-using size_t = unsigned int;
+#include <cstdlib> /* size_t */
 
 _MYLIB_BEGIN
 template <class T>
