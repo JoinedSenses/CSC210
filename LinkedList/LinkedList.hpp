@@ -37,7 +37,7 @@ public:
 	// Access item at specified index.
 	// Assumes index is valid.
 	T &operator[](size_t idx);
-	T &operator[](size_t idx) const;
+	T const &operator[](size_t idx) const;
 
 	// Sets one list equal to another.
 	LinkedList<T> &operator=(LinkedList<T> const &other);
