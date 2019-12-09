@@ -146,7 +146,7 @@ inline T &LinkedList<T>::operator[](size_t idx) {
 
 // Bracket Operator Const
 template<class T>
-inline T &LinkedList<T>::operator[](size_t idx) const {
+inline T const &LinkedList<T>::operator[](size_t idx) const {
 	assert(idx < m_count);
 
 	// Loop through nodes until reaching index
