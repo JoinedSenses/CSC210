@@ -58,10 +58,10 @@ public:
 	void clear();
 
 	// Returns if list is empty.
-	bool empty();
+	bool empty() const;
 
 	// Returns number of items in list.
-	size_t length();
+	size_t length() const;
 };
 
 // Copy Constructor
@@ -290,13 +290,13 @@ inline void LinkedList<T>::clear() {
 
 // Returns if list is empty.
 template<class T>
-inline bool LinkedList<T>::empty() {
+inline bool LinkedList<T>::empty() const {
 	return !m_count;
 }
 
 // Returns number of items in list.
 template<class T>
-inline size_t LinkedList<T>::length() {
+inline size_t LinkedList<T>::length() const {
 	return m_count;
 }
 
