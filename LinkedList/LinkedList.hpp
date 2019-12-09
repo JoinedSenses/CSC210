@@ -2,6 +2,8 @@
 #include <assert.h> /* assert() */
 #include <initializer_list> /* std::initializer_list */
 #include <cstdlib> /* size_t */
+/* LinkedList Class
+ * Arron Vinyard */
 
 #define _MYLIB_BEGIN namespace mylib {
 #define _MYLIB_END }
@@ -35,7 +37,7 @@ public:
 	// Access item at specified index.
 	// Assumes index is valid.
 	T &operator[](size_t idx);
-	T const &operator[](size_t idx) const;
+	T &operator[](size_t idx) const;
 
 	// Sets one list equal to another.
 	LinkedList<T> &operator=(LinkedList<T> const &other);
@@ -144,7 +146,7 @@ inline T &LinkedList<T>::operator[](size_t idx) {
 
 // Bracket Operator Const
 template<class T>
-inline T const &LinkedList<T>::operator[](size_t idx) const {
+inline T &LinkedList<T>::operator[](size_t idx) const {
 	assert(idx < m_count);
 
 	// Loop through nodes until reaching index
@@ -195,6 +197,7 @@ inline void LinkedList<T>::push(T item) {
 
 	Node *node = new Node();
 	node->data = item;
+	node->next = nullptr;
 
 	if (m_front == nullptr) {
 		m_front = node;
