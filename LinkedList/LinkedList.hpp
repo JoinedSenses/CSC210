@@ -2,8 +2,6 @@
 #include <assert.h> /* assert() */
 #include <initializer_list> /* std::initializer_list */
 #include <cstdlib> /* size_t */
-/* LinkedList Class
- * Arron Vinyard */
 
 #define _MYLIB_BEGIN namespace mylib {
 #define _MYLIB_END }
