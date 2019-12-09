@@ -35,7 +35,7 @@ public:
 	// Access item at specified index.
 	// Assumes index is valid.
 	T &operator[](size_t idx);
-	T &operator[](size_t idx) const;
+	T const &operator[](size_t idx) const;
 
 	// Sets one list equal to another.
 	LinkedList<T> &operator=(LinkedList<T> const &other);
@@ -144,7 +144,7 @@ inline T &LinkedList<T>::operator[](size_t idx) {
 
 // Bracket Operator Const
 template<class T>
-inline T &LinkedList<T>::operator[](size_t idx) const {
+inline T const &LinkedList<T>::operator[](size_t idx) const {
 	assert(idx < m_count);
 
 	// Loop through nodes until reaching index
