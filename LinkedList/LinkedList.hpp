@@ -119,7 +119,7 @@ inline LinkedList<T>::LinkedList(std::initializer_list<T> const &list) {
 	}
 }
 
-// Desctructor
+// Destructor
 template<class T>
 inline LinkedList<T>::~LinkedList() {
 	Node *node;
